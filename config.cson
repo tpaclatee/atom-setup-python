@@ -1,23 +1,64 @@
 "*":
   Hydrogen: {}
+  "autocomplete-python":
+    useKite: false
+    useSnippets: "all"
   core:
+    disabledPackages: [
+      "kite"
+    ]
     telemetryConsent: "limited"
     uriHandlerRegistration: "always"
-    useTreeSitterParsers: false
   editor:
     fontSize: 15
     softWrap: true
   "exception-reporting":
     userId: "623d3757-a301-4179-88ab-3798c281a688"
+  "formatters-python":
+    autopep8:
+      binPath: "C:\\Users\\msalerno\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\autopep8.exe"
+    black:
+      binPath: "C:\\Users\\msalerno\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\black.exe"
+    formatOrder: [
+      "yapf"
+      "autopep8"
+      "black"
+      "isort"
+    ]
+    isort:
+      binPath: "C:\\Users\\msalerno\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\isort.exe"
+      cmdArgs: [
+        "--profile black --overwrite-in-place"
+      ]
+    onSave:
+      saveOrder: [
+        "yapf"
+        "autopep8"
+        "black"
+        "isort"
+      ]
+    yapf:
+      binPath: "C:\\Users\\msalerno\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\isort.exe"
+  "highlight-selected":
+    highlightBackground: true
+    lightTheme: true
   kite:
     showWelcomeNotificationOnStartup: false
+  "linter-flake8":
+    flakeErrors: true
+    pycodestyleErrorsToWarnings: true
   "linter-ui-default":
     showPanel: true
   minimap:
+    independentMinimapScroll: true
+    moveCursorOnMinimapClick: true
     plugins:
       "git-diff": true
       "git-diffDecorationsZIndex": 0
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
+    scrollAnimation: true
+  "python-autopep8":
+    formatOnSave: true
   "python-black": {}
   welcome: {}
