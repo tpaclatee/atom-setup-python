@@ -1,0 +1,131 @@
+@import './variables';
+
+// Below is the HTML / CSS class structure for atom's autocomplete
+// so that we can hack its UI for our needs
+autocomplete-suggestion-list {
+  
+  .suggestion-list-scroller {
+    
+    ol {
+
+      &.list-group {
+
+        li.kite-completion {
+          font-size: 1.0em;
+
+          &.selected {}
+
+          .icon-container {
+            i.icon {
+              position: relative;
+
+              &.kite-empty-type {
+                .icon-letter {
+                  visibility: hidden;
+                }
+                &::after {
+                  mask-image: url('atom://kite/assets/logo-small.svg');
+                  -webkit-mask-image: url('atom://kite/assets/logo-small.svg');
+                  bottom: 50%;
+                  right: 50%;
+                  // in theory, this should be half the width/height of the icon,
+                  // but that results in the icon appearing too far to the left,
+                  // so push it rightwards.
+                  margin-right: -0.54em;
+                  margin-bottom: -0.42em;
+                }
+              }
+
+              &::after {
+                content: '';
+                display: block;
+                width: 0.85em;
+                height: 0.85em;
+                mask-image: url('atom://kite/assets/logo-completions.svg');
+                -webkit-mask-image: url('atom://kite/assets/logo-completions.svg');
+                mask-size: contain;
+                -webkit-mask-size: contain;
+                mask-repeat: no-repeat;
+                -webkit-mask-repeat: no-repeat;
+                background-color: @text-color;
+                position: absolute;
+                bottom: 5px;
+                right: 0px;
+              }
+
+              &.module {
+
+              }
+
+              &.function {
+
+              }
+
+              &.type {
+
+              }
+
+              .icon-package {
+
+              }
+              .icon-letter {
+
+              }
+            } 
+          }
+
+          .left-label {
+            
+          }
+
+          .right-label {
+            float: right;
+            position: relative;
+
+            .kind {
+              padding-right: 0.25em;
+              .type {
+
+              }
+              .separator {
+                padding: 0 0.2em;
+              }
+            }
+          }
+
+          .word-container {
+            .word {
+              .character-match {}
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+autocomplete-suggestion-list.select-list.popover-list .suggestion-description.kite-completions {
+  padding: @half-padding;
+  padding-left: @half-padding;
+  overflow: visible;
+  background: @app-background-color;
+}
+
+atom-text-editor[data-grammar="source python"] .autocomplete-suggestion-list.select-list.popover-list .kite-completions .suggestion-description-content {
+  white-space: normal !important;
+  padding-right: @half-padding;
+  .kite-completion-description {
+    font-size: 1em;
+    max-width: 600px;
+    line-height: var(--editor-line-height);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}

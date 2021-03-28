@@ -1,0 +1,57 @@
+{
+  "_from": "https://www.atom.io/api/packages/atom-file-icons/versions/0.7.1/tarball",
+  "_id": "atom-file-icons@0.7.1",
+  "_inBundle": false,
+  "_integrity": "sha512-z3Dy3Bk2m6+bVyy0nx/jZiDuMPA8qyWGVbQyVNfVG/PtGQlvJHnVvx+ldkqoW4qNtQycXfuwXzkzknrhfh8Zpw==",
+  "_location": "/atom-file-icons",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/atom-file-icons/versions/0.7.1/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/atom-file-icons/versions/0.7.1/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/atom-file-icons/versions/0.7.1/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/atom-file-icons/versions/0.7.1/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/atom-file-icons/versions/0.7.1/tarball",
+  "_shasum": "50c85f8d96e1ddb6cb55252e68134cb81427263f",
+  "_spec": "https://www.atom.io/api/packages/atom-file-icons/versions/0.7.1/tarball",
+  "_where": "C:\\Users\\msale\\AppData\\Local\\Temp\\apm-install-dir-2021224-4116-1r6z46r.yid1",
+  "bugs": {
+    "url": "https://github.com/donovanhiland/atom-file-icons/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "logo style icons and ui tweaks to mirror vscode",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/donovanhiland/atom-file-icons#readme",
+  "keywords": [
+    "icons",
+    "file-icons",
+    "vscode",
+    "folders",
+    "file-tree",
+    "file tree",
+    "logos",
+    "fileicons",
+    "file icons",
+    "visual studio code",
+    "vscode",
+    "vsc",
+    "vscode-icons"
+  ],
+  "license": "MIT",
+  "main": "./lib/atom-file-icons",
+  "name": "atom-file-icons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donovanhiland/atom-file-icons.git"
+  },
+  "version": "0.7.1"
+}

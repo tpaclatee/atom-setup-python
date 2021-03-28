@@ -1,0 +1,23 @@
+"*":
+  Hydrogen: {}
+  core:
+    telemetryConsent: "limited"
+    uriHandlerRegistration: "always"
+    useTreeSitterParsers: false
+  editor:
+    fontSize: 15
+    softWrap: true
+  "exception-reporting":
+    userId: "623d3757-a301-4179-88ab-3798c281a688"
+  kite:
+    showWelcomeNotificationOnStartup: false
+  "linter-ui-default":
+    showPanel: true
+  minimap:
+    plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+  "python-black": {}
+  welcome: {}

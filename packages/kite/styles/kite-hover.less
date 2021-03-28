@@ -1,0 +1,140 @@
+@import "ui-variables";
+@import "variables";
+
+.kite-hover {
+  z-index: 400 !important;
+}
+
+kite-hover {
+  display: flex;
+  flex-direction: column;
+  background: @app-background-color;
+  color: @text-color-highlight;
+  padding: @half-padding;
+  border-radius: @component-border-radius;
+  font-family: @font-family;
+  overflow: hidden;
+
+
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, .4);
+
+  animation: fade-in 100ms;
+  @keyframes fade-in {
+    0% { opacity: 0; transform: translate(0, -3px); }
+    100% { opacity: 1; transform: translate(0, 0); }
+  }
+
+  code {
+    font-family: var(--editor-font-family);
+    font-size: 0.9em;
+    line-height: var(--editor-line-height);
+
+    padding: 0;
+    background: inherit;
+  }
+
+  .debug {
+    margin-top: @half-padding;
+
+    pre {
+      cursor: text;
+      -webkit-user-select: all;
+      user-select: all;
+      max-height: 300px;
+      max-width: 500px;
+      overflow: auto;
+
+      > * {
+        pointer-events: none;
+      }
+    }
+  }
+
+  .auto-cursor;
+
+  .definition {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    line-height: initial;
+    margin-top: -3px;
+    width: max-content;
+
+    .name {
+      word-break: break-word;
+    }
+    .type { // TODO: Opportunity to unify CSS: This is very similar as elsewhere, with the exception of font size and different margins
+      font-size: 90%;
+      display: inline-block;
+      flex: none;
+      padding: 0em .2em;
+      margin-right: -.2em;
+      margin-left: 0.5em !important;
+      pointer-events: none;
+      color: @text-color;
+    }
+
+    kite-logo {
+      flex: none;
+      align-self: center;
+
+      &.badge {
+        margin: 0;
+        width: inherit;
+        height: inherit;
+      }
+    }
+
+    kite-links {
+      flex: none;
+      margin-left: 0.5em !important;
+      align-items: baseline;
+
+      a, a:hover, a:active, a:focus {
+        pointer-events: all;
+      }
+
+      a {
+        color: @text-color-info;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      a:last-of-type {
+        padding-right: 0;
+      }
+
+      a:first-of-type {
+        padding-left: 0;
+      }
+
+      a:hover {
+        color: @text-color-highlight !important;
+        cursor: pointer;
+      }
+    }
+
+    .signature, a, a:hover, a:focus, a:active {
+      color: @text-color;
+      pointer-events: none;
+    }
+
+    > * {
+      flex: 1 1 0;
+      &:empty {
+        display: none;
+      }
+
+      &:not(:first-child) {
+        text-align: center;
+        margin-left: @half-padding;
+      }
+    }
+  }
+
+  kite-links {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+}
